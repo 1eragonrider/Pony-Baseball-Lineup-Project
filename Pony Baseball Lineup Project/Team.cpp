@@ -143,6 +143,7 @@ void Team::DeletePlayer(std::string namePar)
 	PlayerToDeletePtr->SetNext(nullptr);
 	delete PlayerToDeletePtr;
 	PlayerToDeletePtr = nullptr;
+	playerCount--;
 }
 
 void Team::SortPlayers() // sorts players on team by batting average (highest to lowest)
