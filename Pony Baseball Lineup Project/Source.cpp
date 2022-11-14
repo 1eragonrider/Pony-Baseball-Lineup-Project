@@ -15,11 +15,15 @@ int main()
 
 	bool exitProgram = false;
 	bool exitFunction = false;
-	std::string userProgressCommand = "";
+	std::string userProgressCommand;
 
 	while (!exitProgram)
 	{
 		system("cls"); // clear command prompt
+
+		// reset some variables
+		exitFunction = false;
+		userProgressCommand;
 
 		// User input
 		std::cout << "-----------   MAIN MENU   -----------" << std::endl;
@@ -40,6 +44,7 @@ int main()
 			system("cls");
 			while (!exitFunction)
 			{
+				system("cls");
 				std::cout << "--- Adding a player ---" << std::endl;
 				std::cout << "Player Name: ";
 				std::cin >> playerNameToAdd;
@@ -66,6 +71,7 @@ int main()
 			system("cls");
 			while (!exitFunction)
 			{
+				system("cls");
 				std::cout << "--- Deleting a player ---" << std::endl;
 				std::cout << "Player Name: ";
 				std::cin >> playerNameToDelete;
@@ -130,7 +136,7 @@ int main()
 
 		// while loop cleanup
 
-		bool exitFunction = false;
-		std::string userProgressCommand = "";
+		exitFunction = false;
+		userProgressCommand;
 	}
 }

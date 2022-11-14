@@ -83,13 +83,12 @@ void Team::AddPlayer(std::string namePar, int battingAveragePar)
 	}
 	else // if the team has at least 1 member
 	{
-		newPlayerPtr = headPtr;
-		while (newPlayerPtr->GetNext() != nullptr)
-		{
-			newPlayerPtr = newPlayerPtr->GetNext();
-		} // iterates until we get to the last player
+		PlayerNode* lastPlayerPtr = headPtr;
 
-		PlayerNode* lastPlayerPtr = newPlayerPtr;
+		while (lastPlayerPtr->GetNext() != nullptr)
+		{
+			lastPlayerPtr = lastPlayerPtr->GetNext();
+		} // iterates until we get to the last player
 
 		newPlayerPtr->SetNext(lastPlayerPtr->GetNext()); // sets the next of the new player to nullptr
 		lastPlayerPtr->SetNext(newPlayerPtr); // sets the last player next to be the new player
